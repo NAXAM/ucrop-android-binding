@@ -1,10 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="uCropQs.uCropQs" android:versionCode="1" android:versionName="1.0">
   <uses-sdk android:minSdkVersion="16" />
+  
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  
   <application android:label="uCropQs">
-    <activity android:name="com.yalantis.ucrop.UCropActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+    
+    <activity 
+      android:name="com.yalantis.ucrop.UCropActivity" 
+      android:screenOrientation="portrait" 
+      android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+    <provider
+      android:name="android.support.v4.content.FileProvider"
+      android:authorities="@string/file_provider_authorities"
+      android:exported="false"
+      android:grantUriPermissions="true">
+      
+      <meta-data
+        android:name="android.support.FILE_PROVIDER_PATHS"
+        android:resource="@xml/file_provider_paths" />
+      
+    </provider>
+
   </application>
+  
 </manifest>
