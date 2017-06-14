@@ -6,4 +6,6 @@
   This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
+  <attr path="/api/package[@name='com.yalantis.ucrop.task']/class[@name='BitmapLoadTask']/method[@name='doInBackground' and count(parameter)=1 and parameter[1][@type='java.lang.Void...']]" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.yalantis.ucrop.task']/class[@name='BitmapCropTask']/method[@name='doInBackground' and count(parameter)=1 and parameter[1][@type='java.lang.Void...']]" name="managedReturn">Java.Lang.Object</attr>
 </metadata>

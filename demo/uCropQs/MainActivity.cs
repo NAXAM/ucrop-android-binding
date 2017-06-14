@@ -27,9 +27,10 @@ namespace uCropQs
         private void BtnCrop_Click(object sender, System.EventArgs e)
         {
             string path = Android.OS.Environment.ExternalStorageDirectory.Path;
+            var destFile = Android.Net.Uri.FromFile(new Java.IO.File(path, "SAMPLE_CROPPED_IMAGE_NAME.png"));
+            var srcFile = Android.Net.Uri.Parse("https://unsplash.it/800/800/?random");
 
-            UCrop uCrop = UCrop.Of(Android.Net.Uri.Parse(String.Format(Locale.Default.ToString(), "https://unsplash.it/500/500/?random")),
-                Android.Net.Uri.FromFile(new Java.IO.File(path, "SAMPLE_CROPPED_IMAGE_NAME.png")));
+            UCrop uCrop = UCrop.Of(srcFile, destFile);
 
             uCrop.UseSourceImageAspectRatio();
             uCrop.WithAspectRatio(1, 1);

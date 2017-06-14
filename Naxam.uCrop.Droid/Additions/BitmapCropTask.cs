@@ -16,8 +16,7 @@ namespace Com.Yalantis.Ucrop.Task
     {
         protected override Java.Lang.Object DoInBackground(params Java.Lang.Object[] @params)
         {
-            // 
-            return null;
+            return DoInBackground(@params as Java.Lang.Void[]);
         }
     }
 }
