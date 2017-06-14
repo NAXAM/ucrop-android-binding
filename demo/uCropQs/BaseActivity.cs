@@ -1,4 +1,3 @@
-using Android.App;
 using Android.Content;
 using Android.Support.V4.App;
 using Android.Support.V7.App;
@@ -7,13 +6,13 @@ using static Android.Views.View;
 
 namespace uCropQs
 {
-    public class BaseActivity : Activity
+    public class BaseActivity : AppCompatActivity
     {
 
         protected const int REQUEST_STORAGE_READ_ACCESS_PERMISSION = 101;
         protected const int REQUEST_STORAGE_WRITE_ACCESS_PERMISSION = 102;
 
-        private Android.App.AlertDialog mAlertDialog;
+        private AlertDialog mAlertDialog;
 
 
         protected override void OnStop()
@@ -47,7 +46,7 @@ namespace uCropQs
 
         protected void ShowAlertDialog(string title, string message, EventHandler<DialogClickEventArgs> onPositiveButtionClicked, string positiveButtonText, EventHandler<DialogClickEventArgs> onNegativeButtionClicked, string negativeButtonText)
         {
-            Android.App.AlertDialog.Builder builder = new Android.App.AlertDialog.Builder(this);
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.SetTitle(title);
             builder.SetMessage(message);
             builder.SetPositiveButton(positiveButtonText, onPositiveButtionClicked);

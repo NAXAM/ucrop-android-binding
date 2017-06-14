@@ -19,7 +19,7 @@ using Com.Yalantis.Ucrop.View;
 
 namespace uCropQs
 {
-    [Activity(Label = "uCropQs", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "uCropQs", MainLauncher = true, Icon = "@drawable/icon", Theme = "@style/AppTheme")]
     public class MainActivity : BaseActivity
     {
 
@@ -37,7 +37,7 @@ namespace uCropQs
         private CheckBox mCheckBoxHideBottomControls;
         private CheckBox mCheckBoxFreeStyleCrop;
         private ITextWatcher mAspectRatioTextWatcher;
-        
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);

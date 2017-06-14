@@ -19,7 +19,7 @@ using System.Collections.Generic;
 
 namespace uCropQs
 {
-    [Activity(Label = "ResultActivity")]
+    [Activity(Label = "ResultActivity", Theme = "@style/AppTheme")]
     public class ResultActivity : BaseActivity
     {
 
@@ -50,12 +50,12 @@ namespace uCropQs
             options.InJustDecodeBounds = true;
             Android.Graphics.BitmapFactory.DecodeFile(new Java.IO.File(Intent.Data.Path).AbsolutePath, options);
 
-            //SetSupportActionBar(FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar));
-            //if (SupportActionBar != null)
-            //{
-            //    SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            //    SupportActionBar.Title = GetString(Resource.String.format_crop_result_d_d, options.OutWidth, options.OutHeight);
-            //}
+            SetSupportActionBar(FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar));
+            if (SupportActionBar != null)
+            {
+                SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+                SupportActionBar.Title = GetString(Resource.String.format_crop_result_d_d, options.OutWidth, options.OutHeight);
+            }
         }
 
         public static void StartWithUri(Context context, Android.Net.Uri uri)
