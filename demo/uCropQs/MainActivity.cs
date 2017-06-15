@@ -86,7 +86,8 @@ namespace uCropQs
 
                     break;
 
-                default: base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+                default:
+                    base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
                     break;
             }
@@ -104,7 +105,7 @@ namespace uCropQs
                 System.Random random = new System.Random();
                 int minSizePixels = 800;
                 int maxSizePixels = 2400;
-                StartCropActivity(Android.Net.Uri.Parse(string.Format(Locale.Default.ToString(), "https://unsplash.it/%d/%d/?random",
+                StartCropActivity(Android.Net.Uri.Parse(string.Format("https://unsplash.it/{0}/{1}/?random",
                         minSizePixels + random.Next(maxSizePixels - minSizePixels),
                         minSizePixels + random.Next(maxSizePixels - minSizePixels))));
             };
@@ -141,8 +142,8 @@ namespace uCropQs
 
         private void PickFromGallery()
         {
-            if (Build.VERSION.SdkInt >= Build.VERSION_CODES.JellyBean
-                    && ActivityCompat.CheckSelfPermission(this, Manifest.Permission.ReadExternalStorage)
+            if (Build.VERSION.SdkInt >= BuildVersionCodes.M
+                && ContextCompat.CheckSelfPermission(this, Manifest.Permission.ReadExternalStorage)
                     != Permission.Granted)
             {
                 RequestPermission(Manifest.Permission.ReadExternalStorage,
@@ -235,7 +236,7 @@ namespace uCropQs
 
             return uCrop;
         }
-        
+
         private UCrop AdvancedConfig(UCrop uCrop)
         {
             UCrop.Options options = new UCrop.Options();
@@ -327,7 +328,7 @@ namespace uCropQs
                 Toast.MakeText(this, Resource.String.toast_cannot_retrieve_cropped_image, ToastLength.Short).Show();
             }
         }
-        
+
         private void HandleCropError(Intent result)
         {
             Throwable cropError = UCrop.GetError(result);
