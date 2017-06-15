@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <!-- Required elements-->
+        <id>Naxam.uCrop.Droid</id>
+        <version>2.2.0</version>
+        <description>Xamarin Binding Library - uCrop</description>
+        <authors>Vu Duc Tuyen</authors>
+        <owners>NAXAM CO.,LTD</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <title>Naxam - uCrop</title>
+        <releaseNotes>uCrop v2.2.0</releaseNotes>
+        <summary>Xamarin Binding Library - uCrop</summary>
+        <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+        <projectUrl>https://github.com/NAXAM/ucrop-android-binding</projectUrl>
+        <copyright>Copyright (c) 2017 NAXAM</copyright>
+        <tags>Xamarin.Android, ucrop</tags>
+        <dependencies>
+            <dependency id="Square.OkHttp3" version="3.4.1.1" />
+            <dependency id="Xamarin.Android.Support.v7.AppCompat" version="24.2.1" />
+        </dependencies>
+    </metadata>
+    <!-- Optional 'files' node -->
+    <files>
+        <file src="Naxam.uCrop.Droid/bin/Release/Naxam.uCrop.Droid.dll" target="lib/MonoAndroid10/Naxam.uCrop.Droid.dll" />
+    </files>
+</package>
