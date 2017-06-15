@@ -3,13 +3,13 @@
     <metadata>
         <!-- Required elements-->
         <id>Naxam.uCrop.Droid</id>
-        <version>2.2.1</version>
+        <version>2.2.1-native</version>
         <description>Xamarin Binding Library - uCrop</description>
         <authors>Vu Duc Tuyen</authors>
         <owners>NAXAM CO.,LTD</owners>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <title>Naxam - uCrop</title>
-        <releaseNotes>uCrop v2.2.1</releaseNotes>
+        <releaseNotes>uCrop v2.2.1-native</releaseNotes>
         <summary>Xamarin Binding Library - uCrop</summary>
         <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
         <projectUrl>https://github.com/NAXAM/ucrop-android-binding</projectUrl>
